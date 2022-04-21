@@ -2,19 +2,28 @@
 <div> 
     <h3> {{msg}}</h3>
     <p> we help you drive your business with the modern technolody. </p>
-</div>
   <form >
     <div class="form-control">
       <label>Town</label>
-      <input type="text" v-model="text" name="text" placeholder="name" />
+      <!-- <input type="text" v-model="text" name="text" placeholder="name" />
       <input type="text" v-model="text" name="text" placeholder="elevation" />
       <input type="text" v-model="text" name="text" placeholder="grid reference" />
       <input type="text" v-model="text" name="text" placeholder="longitude" />
-      <input type="text" v-model="text" name="text" placeholder="latitude" />
+      <input type="text" v-model="text" name="text" placeholder="latitude" /> -->
+      <BasicInputForm
+      :placeholder="name"/>
+      <BasicInputForm
+      :placeholder="elevation"/>
+      <BasicInputForm
+      :placeholder="gridreference"/>
+      <BasicInputForm
+      :placeholder="longitude"/>
+      <BasicInputForm
+      :placeholder="latitude"/>
     </div>
     <input type="submit" value="submit" class="btn btn-block" />
   </form>
-
+</div>
 </template>
 
 <script>
