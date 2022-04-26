@@ -9,7 +9,7 @@
     :placeholder="placeholder"
 
     v-bind="$attrs"
-    :value="inputValue"
+  
     @input="$emit('update:inputValue', $event.target.value)"
     class="field"
   />
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+
 export default {
   props: {
     placeholder: {
