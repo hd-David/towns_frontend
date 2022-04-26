@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   props: {
     placeholder: {
@@ -32,5 +33,6 @@ export default {
       default: "",
     },
   },
+  
 };
 </script>
