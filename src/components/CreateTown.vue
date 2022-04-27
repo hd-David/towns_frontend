@@ -2,22 +2,22 @@
 <div class="container"> 
     <h3> {{msg}}</h3>
     <p> we help you drive your business with the modern technology. </p>
-  <form @submit.prevent='OnCreateTown'>
+  <form v-on:submit.prevent='OnCreateTown'>
     <div class="form-control">
-      <label>task</label>
-      <input type="text" class ="form-control" v-model="text" name="county" placeholder="county" />
-      <input type="text" class ="form-control" v-model="text" name="name" placeholder="name" />
-      <input type="text" class ="form-control" v-model="text" name="grid_reference" placeholder="grid reference" />      
-      <input type="number" step="any" class ="form-control" v-model="number" name="latitude" placeholder="latitude" />
-      <input type="number" step="any" class ="form-control"  v-model="number" name="longitude" placeholder="longitude" />
-      <input type="number" step="any" class ="form-control" v-model="number" name="elevation" placeholder="elevation" />
-      <input type="text" class ="form-control" v-model="text" name="postcode_sector" placeholder="postcode_sector" />
-      <input type="text" class ="form-control" v-model="text" name="nuts_region" placeholder="nuts_region" />
-      <input type="text" class ="form-control" v-model="text" name="nation" placeholder="nation" />
-      <input type="number" step="any" class ="form-control" v-model="number" name="northing" placeholder="northing" />
-      <input type="number" step="any" class ="form-control" v-model="number" name="easting" placeholder="easting" />
-      <input type="text" class ="form-control" v-model="text" name="town_type" placeholder="town_type" />
-      <input type="text" class ="form-control" v-model="text" name="local_government_area" placeholder="local_government_area" />
+      <label>Put a town on the list!</label> 
+      <input type="text" class ="form-control" v-model="form.county" name="text" placeholder="county"/><p>county</p>
+      <input type="text" class ="form-control" v-model="form.name" name="text" placeholder="name" /><p>name</p>
+      <input type="text" class ="form-control" v-model="form.grid_reference" name="text" placeholder="grid reference" /> <p>grid reference</p>     
+      <input type="number" step="any" class ="form-control" v-model="form.latitude" name="text" placeholder="latitude" /><p>latitude</p>
+      <input type="number" step="any" class ="form-control"  v-model="form.longitude" name="text" placeholder="longitude" /><p>longitude</p>
+      <input type="number" step="any" class ="form-control" v-model="form.elevation" name="text" placeholder="elevation" /><p>elevation</p>
+      <input type="text" class ="form-control" v-model="form.postcode_sector" name="text" placeholder="postcode_sector" /><p>postcode sector</p>
+      <input type="text" class ="form-control" v-model="form.nuts_region" name="text" placeholder="nuts_region" /><p>nuts region</p>
+      <input type="text" class ="form-control" v-model="text" name="form.nation" placeholder="nation" /><p>nation</p>
+      <input type="number" step="any" class ="form-control" v-model="form.northing" name="text" placeholder="northing" /><p>northing</p>
+      <input type="number" step="any" class ="form-control" v-model="form.easting" name="text" placeholder="easting" /><p>easting</p>
+      <input type="text" class ="form-control" v-model="text" name="form.town_type" placeholder="town_type" /><p>town type</p>
+      <input type="text" class ="form-control" v-model="text" name="form.local_government_area" placeholder="local_government_area" /><p>local government area</p>
     </div>
     <input type="submit" value="submit" class="btn btn-block" />
   </form>
@@ -49,17 +49,13 @@ export default {
         town_type:'',
         local_government_area:'',
         }
-
-      
       };
-      
     },
     methods:{
       OnCreateTown(){ // when the submit button is clicked, the form data is submitted to the backend
-        axios.post('https://david.darwinist.io/proxy/5000/town',this.form)
+        axios.post('https://chanty.darwinist.io/proxy/5000/town/', this.form)
         .then((response) => {// checking response in the console
             console.log(response.data)});
-                
       },
       
     },
