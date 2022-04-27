@@ -2,15 +2,18 @@
 <div>
   <img alt="Vue logo" src="./assets/logo.png">
   <CreateTown msg= "welcom to darwinist"/>
+  <SearchTown />
   </div>
 </template>
 
 <script>
 import CreateTown from './components/CreateTown.vue'
+import SearchTown from './components/SearchTown.vue'
 export default {
   name: 'App',
   components: {
-    CreateTown
+    CreateTown,
+    SearchTown
   }
 }
 </script>
@@ -20,9 +23,9 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: left;
   color: #2c3e50;
   margin-top: 60px;
-  margin-left: 10px;
+  margin-left: 40px;
 }
 </style>

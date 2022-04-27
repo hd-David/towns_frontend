@@ -1,11 +1,10 @@
 <template>
-<div> 
+<div class="container"> 
     <h3> {{msg}}</h3>
     <p> we help you drive your business with the modern technology. </p>
   <form v-on:submit.prevent='OnCreateTown'>
     <div class="form-control">
-      <label>Put a town on the list!</label>
-      
+      <label>Put a town on the list!</label> 
       <input type="text" class ="form-control" v-model="form.county" name="text" placeholder="county"/><p>county</p>
       <input type="text" class ="form-control" v-model="form.name" name="text" placeholder="name" /><p>name</p>
       <input type="text" class ="form-control" v-model="form.grid_reference" name="text" placeholder="grid reference" /> <p>grid reference</p>     
@@ -77,5 +76,10 @@ export default {
   padding: 3px 7px;
   font-size: 17px;
 }
-
+.container {
+width: 100;
+height: 100;
+margin: 10px;
+align-content: left;
+}
 </style>
