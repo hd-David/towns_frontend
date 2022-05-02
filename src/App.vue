@@ -1,7 +1,7 @@
 <template>
 <div>
   <img alt="Vue logo" src="./assets/logo.png">
-  <CreateTown msg= "welcom to darwinist"/>
+  <CreateTown msg= "welcome to darwinist"/>
   <SearchTown />
   </div>
 </template>
