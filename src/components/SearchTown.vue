@@ -1,26 +1,18 @@
 <template>
    <div class="container">
-    
-
- 
    <div id="town-search">
 
   <div class="input-container">
    
-     <input type="text" placeholder="Type a county" v-model="searchInputCounty"/>
-      <input type="text" placeholder="Type a town's name" v-model="searchInputName"/>
+     <input type="text" placeholder="Type a county" v-model="county"/>
+      <input type="text" placeholder="Type a town's name" v-model="name"/>
       <button @click="SearchTown"> Search Town </button>
   </div>
- 
-<div class="columns medium-3" v-for="result in results" :key="result.value">
 
-      <p>
-        HELLO!!  {{ result }}.</p>
+      <p>  HELLO!!  {{ results.name }} {{results.nation}}.</p>
 
 </div>  
   </div>
-</div>
-
 </template>
 
 <script>
@@ -32,8 +24,8 @@ export default {
         },
   data(){
     return{
-      searchInputCounty: [],
-      searchInputName: [],
+      county:'',
+      name:'',
       results: []
     }
     
@@ -41,16 +33,16 @@ export default {
   methods :{
     SearchTown() {
     axios
-      .get('https://chanty.darwinist.io/proxy/5000/town', {params: 
+      .get('https://david.darwinist.io/proxy/5000/town', {params: 
       {
         // county: "Derbyshire"
-    "county": this.searchInputCounty, 
+    "county": this.county, 
     // name: "Ambergate",
-    "name": this.searchInputName
+    "name": this.name
 }
       })
      .then(response => {
-    this.results = response.data.county + response.data.name + response.data.nation
+    this.results = response.data
     console.log("hi results", response.data.results),
     console.log("hi county ", response.data.county),
     console.log("hi name", response.data.name)
