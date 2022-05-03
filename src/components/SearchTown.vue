@@ -9,7 +9,7 @@
       <button @click="SearchTown"> Search Town </button>
   </div>
 
-      <p>  HELLO!!  {{ results.name }} {{results.nation}}.</p>
+      <p>  HELLO!!  {{ results }}.</p>
 
 </div>  
   </div>
