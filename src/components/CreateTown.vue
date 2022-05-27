@@ -2,7 +2,7 @@
 <div class="container"> 
     <h3> {{msg}}</h3>
     <p> we help you drive your business with the modern technology. </p>
-  <form v-on:submit.prevent='OnCreateTown'>
+  <form @submit.prevent='OnCreateTown'>
     <div class="form-control">
       <label>Put a town on the list!</label> 
       <input type="text" class ="form-control" v-model="form.county" name="text" placeholder="county"/><p>county</p>
@@ -17,7 +17,7 @@
       <input type="number" step="any" class ="form-control" v-model="form.northing" name="text" placeholder="northing" /><p>northing</p>
       <input type="number" step="any" class ="form-control" v-model="form.easting" name="text" placeholder="easting" /><p>easting</p>
       <input type="text" class ="form-control" v-model="form.town_type" name="town_type" placeholder="town_type" /><p>town type</p>
-      <input type="text" class ="form-control" v-model="form.local_government_are" name="local_government_area" placeholder="local_government_area" /><p>local government area</p>
+      <input type="text" class ="form-control" v-model="form.local_government_area" name="local_government_area" placeholder="local_government_area" /><p>local government area</p>
     </div>
     <input type="submit" value="submit" class="btn btn-block" />
   </form>
@@ -53,7 +53,7 @@ export default {
     },
     methods:{
     OnCreateTown(){ // when the submit button is clicked, the form data is submitted to the backend
-        axios.post('https://chanty.darwinist.io/proxy/5000/town', this.form)
+        axios.post('https://david.darwinist.io/proxy/5000/town', this.form)
         .then((response) => {// checking response in the console
             console.log(response.data)});
       },

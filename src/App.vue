@@ -1,31 +1,33 @@
 <template>
 <div>
   <img alt="Vue logo" src="./assets/logo.png">
-  <CreateTown msg= "welcome to darwinist"/>
+  <CreateTown msg= "welcome to darwinist"/> 
+  <UpdateTown/><br>
+  <deleteTown/><br>
   <SearchTown />
+
   </div>
 </template>
 
 <script>
 import CreateTown from './components/CreateTown.vue'
 import SearchTown from './components/SearchTown.vue'
+import UpdateTown from './components/UpdateTown.vue'
+import deleteTown from './components/deleteTown.vue'
 export default {
   name: 'App',
   components: {
     CreateTown,
-    SearchTown
+    SearchTown,
+    UpdateTown,
+    deleteTown
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: left;
-  color: #2c3e50;
-  margin-top: 60px;
-  margin-left: 40px;
+  background-color: aquamarine;
+  text-align: center;
 }
 </style>
