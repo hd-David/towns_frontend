@@ -1,27 +1,37 @@
+
+
 <template>
-<div>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <CreateTown msg= "welcome to darwinist"/> 
-  <UpdateTown/><br>
-  <deleteTown/><br>
-  <SearchTown />
-
-  </div>
+<p>Hello from App.vue</p>
+   <img alt="Vue logo" src="./assets/logo.png">
+   <div class="container">
+<router-view></router-view>
+</div>
+<nav>
+                <ul>
+                    <li>
+                        <router-link to="/">Home</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/create">create</router-link>
+                    </li>
+                      <li>
+                        <router-link to="/search">search</router-link>
+                    </li>
+                        <li>
+                        <router-link to="/update">update</router-link>
+                    </li>
+                        <li>
+                        <router-link to="/delete">delete</router-link>
+                    </li>
+                 
+                </ul>
+            </nav>
 </template>
-
 <script>
-import CreateTown from './components/CreateTown.vue'
-import SearchTown from './components/SearchTown.vue'
-import UpdateTown from './components/UpdateTown.vue'
-import deleteTown from './components/deleteTown.vue'
+
+
 export default {
-  name: 'App',
-  components: {
-    CreateTown,
-    SearchTown,
-    UpdateTown,
-    deleteTown
-  }
+
 }
 </script>
 

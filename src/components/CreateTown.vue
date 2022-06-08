@@ -53,7 +53,7 @@ export default {
     },
     methods:{
     OnCreateTown(){ // when the submit button is clicked, the form data is submitted to the backend
-        axios.post('https://david.darwinist.io/proxy/5000/town', this.form)
+        axios.post('https://chanty.darwinist.io/proxy/5000/town', this.form)
         .then((response) => {// checking response in the console
             console.log(response.data)});
       },

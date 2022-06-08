@@ -6,7 +6,8 @@ module.exports = {
     devServer: {
       webSocketServer: false,
       liveReload: false,
-      hot: false
+      hot: false,
+      historyApiFallback: true
       }
   }
 }
