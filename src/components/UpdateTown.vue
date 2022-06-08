@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+     <div class="container">
         <h2 class="text-center">Updating a Town info</h2>
         <div class="row">
             <div class="col-md-12">
@@ -37,7 +37,7 @@ export default{
     },
     methods:{
         updateTown(){
-            axios.patch('https://david.darwinist.io/proxy/5000/town',this.form)
+            axios.patch('https://chanty.darwinist.io/proxy/5000/town',this.form)
             .then((response) => {// checking response in the console
             console.log(response.data)})
             .catch((error) => {
