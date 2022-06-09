@@ -2,9 +2,9 @@
 <div class="container"> 
     <h3> {{msg}}</h3>
     <p> we help you drive your business with the modern technology. </p>
-  <form @submit.prevent='OnCreateTown'>
-    <div class="form-control">
-      <label>Put a town on the list!</label> 
+   <h2>Put a town on the list!</h2> 
+    <form @submit.prevent='OnCreateTown'>
+    <div>
       <input type="text" class ="form-control" v-model="form.county" name="text" placeholder="county"/><p>county</p>
       <input type="text" class ="form-control" v-model="form.name" name="text" placeholder="name" /><p>name</p>
       <input type="text" class ="form-control" v-model="form.grid_reference" name="text" placeholder="grid reference" /> <p>grid reference</p>     
@@ -18,8 +18,8 @@
       <input type="number" step="any" class ="form-control" v-model="form.easting" name="text" placeholder="easting" /><p>easting</p>
       <input type="text" class ="form-control" v-model="form.town_type" name="town_type" placeholder="town_type" /><p>town type</p>
       <input type="text" class ="form-control" v-model="form.local_government_area" name="local_government_area" placeholder="local_government_area" /><p>local government area</p>
+    <input type="submit" value="submit" class="btn btn-block"/>
     </div>
-    <input type="submit" value="submit" class="btn btn-block" />
   </form>
 </div>
 </template>

@@ -4,6 +4,7 @@ import CreateTown from './components/CreateTown';
 import SearchTown from "./components/SearchTown";
 import UpdateTown from "./components/UpdateTown";
 import DeleteTown from "./components/DeleteTown"
+import NavBar from "./components/NavBar"
 
 import App from './App.vue';
 
@@ -20,9 +21,7 @@ const routes = createRouter({
 
 
 const app = createApp(App)
+// global use of NavBar
+app.component("NavBar", NavBar)
 app.use(routes)
 app.mount('#app')
-
-// createApp(App).mount('#app')
-// // test
-// App.use(router)
