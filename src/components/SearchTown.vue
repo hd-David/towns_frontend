@@ -1,22 +1,21 @@
 <template>
-   <div class="container">
+
    <div id="town-search">
   <div class="input-container">
      <input type="text" placeholder="Type a county" v-model="county"/>
       <input type="text" placeholder="Type a town's name" v-model="name"/>
-      <button @click="SearchTown"> Search Town </button>
+      <button @click="SearchTown"> Search Town from searchtown </button>
   </div>
 
       <p>  HELLO!!  {{ results }}.</p>
 
 </div>  
-  </div>
+  
 </template>
 
 <script>
 import axios from 'axios';
 export default {
-        name: 'SearchTown',
         props: {
             messege: String
         },
@@ -31,7 +30,7 @@ export default {
   methods :{
     SearchTown() {
     axios
-      .get('https://david.darwinist.io/proxy/5000/town', {params: 
+      .get('https://chanty.darwinist.io/proxy/5000/town', {params: 
       {
         // county: "Derbyshire"
     "county": this.county, 

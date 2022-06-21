@@ -15,7 +15,7 @@
 <script>
 import axios from 'axios'
 export default {
-    name:'deleteTown',
+    name:'DeleteTown',
     
     data(){
         return{
@@ -26,7 +26,7 @@ export default {
     },
     methods:{
         DeleteTown(){
-            axios.delete('https://david.darwinist.io/proxy/5000/town', {data:this.form})
+            axios.delete('https://chanty.darwinist.io/proxy/5000/town', {data:this.form})
              .then(response => {
                  console.log(response.data);
              })
