@@ -1,9 +1,7 @@
 <template>
    <div class="container">
    <div id="town-search">
-
   <div class="input-container">
-   
      <input type="text" placeholder="Type a county" v-model="county"/>
       <input type="text" placeholder="Type a town's name" v-model="name"/>
       <button @click="SearchTown"> Search Town </button>
